@@ -1,0 +1,4 @@
+conn = PG.connect( host: 'ec2-amazon-us-east-5.amazonaws.com',  )
+
+require 'pg'
+conn = PG::Connection.open(:host => 'ec2-amazon-us-east-5.amazonaws.com', :dbname => 'new-york', :user => 'frank', :password => 'hoboken')
