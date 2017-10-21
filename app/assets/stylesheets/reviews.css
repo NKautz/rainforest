@@ -2,3 +2,12 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+label {
+    display: block !important;
+    margin-bottom: .5rem;
+}
+textarea#review_comment {
+    width: 100%;
+    border-radius: 3px;
+    min-height: 140px;
+}

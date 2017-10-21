@@ -6,9 +6,9 @@
   <% @products.each do |product| %>
   <div class="col-md-4">
 
-    <div class="card" style="width: 20rem;">
+    <div class="card">
       <div class="card-body">
-        <%= image_tag product.image, :size => "260x180", :crop => :fill %>
+        <%= image_tag product.image, :size => "100%", :crop => :fill %>
         <h4 class="card-title"><%= product.name %></h4>
         <p class="card-text"><%= product.description %></p>
         <p class="card-text"><strong>$ <%= product.formatted_price %></strong></p>

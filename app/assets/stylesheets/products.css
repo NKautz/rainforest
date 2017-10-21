@@ -5,3 +5,9 @@
 .card img {
 	width:100%;
 }
+button a {
+    color: white !important;
+}
+button a:hover {
+    background: transparent;
+}
