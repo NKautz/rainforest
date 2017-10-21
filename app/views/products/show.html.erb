@@ -1,22 +1,37 @@
 <p id="notice"><%= notice %></p>
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="title">
+  <h1><%= @product.name %></h1>
+</div>
 <p>
   <div><%= image_tag @product.image, size: 200 %></div>
 </p>
 <p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
 <strong>Price:</strong>
 <%= @product.formatted_price %>
 </p>
-
-<h3>Reviews</h3>
+<!-- tabs -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="desciption" aria-selected="true">description</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">reviews</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+    <div class="product-description">
+<h4 class="description-title">Description</h4>
+<p>
+  <%= @product.description %>
+</p>
+</div>
+  </div>
+  <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+    <h3>Reviews</h3>
 <% @product.reviews.each do |review| %>
   <p>
     <%= review.comment %>
@@ -24,8 +39,12 @@
     Added on: <%= review.created_at %>
   </p>
 <% end %>
-<h3>New Review</h3>
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+    <h3>New Review</h3>
 <%= render 'reviews/form' %>
-
+  </div>
+</div>
+<!-- end tabs -->
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
