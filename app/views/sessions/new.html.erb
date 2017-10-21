@@ -1,0 +1,13 @@
+<h2>Login</h2>
+
+<%= form_tag '/login' do %>
+
+  <div>
+    <p>Email: <%= text_field_tag :email %>
+    Password: <%= password_field_tag :password %>
+    <%= submit_tag "Submit" %></p>
+
+    <p>These fields are case-sensitive</p>
+  </div>
+
+<% end %>

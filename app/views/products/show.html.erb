@@ -6,8 +6,13 @@
   <div><%= image_tag @product.image, size: 200 %></div>
 </p>
 <p>
-<strong>Price:</strong>
-<%= @product.formatted_price %>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  $ <%= @product.formatted_price %>
 </p>
 <!-- tabs -->
 <ul class="nav nav-tabs" id="myTab" role="tablist">
