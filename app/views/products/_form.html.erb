@@ -10,27 +10,24 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :product_name %>
+  <form>
+  <div class="form-group">
+    <%= form.text_field :name, id: :product_name, placeholder: "product name", class: "form-control" %>
   </div>
-    <div class="field">
-    <%= form.label :add_image_url %>
-    <%= form.text_field :image, id: :image_url %>
+    <div class="form-group">
+    <%= form.text_field :image, id: :image_url, placeholder: "Add image url", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :product_description %>
+  <div class="form-group">
+    <%= form.text_area :description, id: :product_description, placeholder: "Enter description", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :price_in_cents %>
-    <%= form.number_field :price_in_cents, id: :product_price_in_cents %>
+  <div class="form-group">
+    <%= form.number_field :price_in_cents, id: :product_price_in_cents, placeholder: "$ Enter price in cents format", class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-success" %>
   </div>
+  </form>
 <% end %>
