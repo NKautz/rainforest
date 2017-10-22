@@ -95,6 +95,8 @@ nav.bg-light {
 /*****************END nav bar styles*********************/
 
 /*****************HOME PAGE STYLES***********************/
-.container div#myCarousel {
-    margin-top: 90px !important;
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9 !important;
+    border-color: #0062cc;
 }
