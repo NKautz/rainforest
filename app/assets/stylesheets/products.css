@@ -11,3 +11,6 @@ button a {
 button a:hover {
     background: transparent;
 }
+.product-full-image img {
+    width: 100% !important;
+}
