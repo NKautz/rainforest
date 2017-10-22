@@ -6,7 +6,7 @@ body {
 }
 
 body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 13px;
   line-height: 18px;
 }
@@ -81,4 +81,20 @@ label {
 
 .login-page {
     min-height: 400px;
+}
+/*****************nav bar styles*********************/
+nav.bg-light {
+    background-color: white !important;
+    border-bottom: 1px solid black;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black !important;
+    font-size: 16px;
+}
+/*****************END nav bar styles*********************/
+
+/*****************HOME PAGE STYLES***********************/
+.container div#myCarousel {
+    margin-top: 90px !important;
 }
