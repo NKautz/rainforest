@@ -14,3 +14,9 @@ button a:hover {
 .product-full-image img {
     width: 100% !important;
 }
+
+.new-product {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}

@@ -6,10 +6,12 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item">
-				<a class="nav-link" href="<%= root_path %>">Home</a>
+				<!-- <a class="nav-link" href="<%= root_path %>">Home</a> -->
+				<button class="btn btn-sm align-middle btn-success mx-4" type="button"><%= link_to 'Home', '/' %></button>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="<%= products_path %>">Products</a>
+				<!-- <a class="nav-link" href="<%= products_path %>">Products</a> -->
+				<button class="btn btn-sm align-middle btn-primary" type="button"><%= link_to 'Products', '/products' %></button>
 			</li>
 		</ul>
 		<form class="form-inline">
@@ -18,10 +20,8 @@
 			<button class="btn btn-danger" type="button"><%= link_to "Logout", '/logout' %></button>
 			<% else %>
 			<button class="btn btn-sm align-middle btn-success mx-4" type="button"><%= link_to 'Login', '/login' %></button>
-			<button class="btn btn-sm align-middle btn-primary" type="button"><%= link_to 'Signup', '/signup' %></button>
+			<button class="btn btn-sm align-middle btn-primary" type="button"><%= link_to 'Sign Up', '/signup' %></button>
 			<% end %>
 		</form>
 	</div>
 </nav>
-
-

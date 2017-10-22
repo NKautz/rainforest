@@ -78,3 +78,7 @@ div.actions {
 label {
   display: block;
 }
+
+.login-page {
+    min-height: 400px;
+}
