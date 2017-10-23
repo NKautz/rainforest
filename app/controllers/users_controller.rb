@@ -17,4 +17,8 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
+  def role?(role)
+    roles.any? { |r| r.name.underscore.to_sym == role }
+  end
+
 end

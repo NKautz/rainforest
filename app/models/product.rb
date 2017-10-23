@@ -8,3 +8,4 @@ class Product < ActiveRecord::Base
     sprintf("%.2f", price_in_dollars).gsub(/(\d)(?=(\d{3})+(?!\d))/, "\\1,")
   end
 end
+
