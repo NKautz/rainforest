@@ -1,3 +1,32 @@
+@media only screen and (max-width: 767px) {
+  .mobile-banner img {
+      width: 100%;
+      display: block !important;
+  }
+  .mobile-banner{
+    position: relative;
+  }
+	div#myCarousel {
+		display: none;
+	}
+  .mobile-banner-caption {
+    position: absolute;
+    right: 30%;
+    left: 35%;
+    top: 40%;
+    text-align: center;
+    display: block !important;
+}
+}
+.mobile-banner img {
+    display: none;
+}
+.mobile-banner-caption {
+  display: none;
+}
+.carousel {
+    margin-bottom: 0 !important;
+}
 body {
   background-color: #fff;
   color: #333;
@@ -83,19 +112,22 @@ label {
     min-height: 400px;
 }
 
-/*****************nav bar styles*********************/
+/*****************NAV BAR STYLES*********************/
 
 nav.bg-light {
-    background-color: white !important;
-    border-bottom: 1px solid black;
+    background-color: gray !important;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: black !important;
+    color: white !important;
     font-size: 16px;
 }
 
-/*****************END nav bar styles*********************/
+.navbar-light .navbar-brand {
+    color: white !important;
+}
+
+/***************************END***********************/
 
 /*****************HOME PAGE STYLES***********************/
 
@@ -112,6 +144,27 @@ nav.bg-light {
 .text-center {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+/************************END*****************************/
+
+/*****************LOGIN PAGE STYLES***********************/
+
+.center-align {
+  text-align: center;
+}
+
+/************************END*****************************/
+
+/*****************SIGN UP PAGE STYLES***********************/
+
+.center-align {
+  text-align: center;
 }
 
 /************************END*****************************/

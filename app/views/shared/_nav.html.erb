@@ -14,7 +14,7 @@
 		</ul>
 		<form class="form-inline">
 			<% if current_user %>
-			<p class="font-weight-bold px-4 pt-3">Hello! <%= current_user.name %></p>
+			<p class="font-weight-bold px-4 pt-3">Hello! <%= current_user.name %>.</p>
 			<button class="btn btn-danger" type="button"><%= link_to "Logout", '/logout' %></button>
 			<% else %>
 			<button class="btn btn-sm align-middle btn-success mx-4" type="button"><%= link_to 'Login', '/login' %></button>
