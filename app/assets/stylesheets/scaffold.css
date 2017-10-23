@@ -3,30 +3,38 @@
       width: 100%;
       display: block !important;
   }
+
   .mobile-banner{
     position: relative;
   }
+
 	div#myCarousel {
 		display: none;
 	}
+
   .mobile-banner-caption {
     position: absolute;
     right: 30%;
     left: 35%;
-    top: 40%;
+    top: 60%;
     text-align: center;
     display: block !important;
+  }
+
 }
-}
+
 .mobile-banner img {
     display: none;
 }
+
 .mobile-banner-caption {
   display: none;
 }
+
 .carousel {
     margin-bottom: 0 !important;
 }
+
 body {
   background-color: #fff;
   color: #333;
