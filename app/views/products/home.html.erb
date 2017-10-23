@@ -6,32 +6,26 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+            <img class="first-slide" src="https://ez.no/var/ezflow_site/storage/images/media/images/hackathon-landing-page-2/657157-2-eng-GB/Hackathon-landing-page-2.png" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
-                <h1>Everything you need to code.</h1>
-                <p>Electronics, swag, etc.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Shop Now</a></p>
+                <p><a class="btn btn-lg btn-light" href="<%= products_path %>" role="button">Shop Now</a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+            <img class="second-slide" src="https://pbs.twimg.com/media/DKSHBoDW4AIk8j6.jpg" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Featured This Month:</h1>
-                <p>Cold Gear!</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a></p>
+                <p><a class="btn btn-lg btn-light" href="<%= '/login' %>" role="button">Login</a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+            <img class="third-slide" src="https://www.aiche.org/sites/default/files/styles/aiche_content/public/images/overview_page/Members_only_ssk_574_125898974.jpg" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
-                <h1>Not A Member?</h1>
-                <p>Sign Up Today!</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign Up</a></p>
+                <p><a class="btn btn-lg btn-light" href="<%= '/signup' %>" role="button">Sign Up</a></p>
               </div>
             </div>
           </div>
@@ -45,8 +39,12 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-
-
+      <div class="mobile-banner pb-5">
+        <img class="first-slide" src="https://ez.no/var/ezflow_site/storage/images/media/images/hackathon-landing-page-2/657157-2-eng-GB/Hackathon-landing-page-2.png" alt="First slide">
+          <div class="mobile-banner-caption">
+            <p><a class="btn btn-lg btn-light" href="<%= products_path %>" role="button">Shop Now</a></p>
+        </div>
+      </div>
       <!-- Marketing messaging and featurettes
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -54,17 +52,21 @@
       <div class="container marketing">
 
         <!-- Three columns of text below the carousel -->
+
+        <div class="center">
+          <h1>Everything you need to code.</h1>
+        </div>
+
         <div class="row">
           <% @products.each do |product| %>
             <div class="col-lg-4">
              <%= image_tag product.image, size: 140 %>
               <h2><%= product.name%></h2>
               <p><%= product.description %></p>
-              <p><%= link_to "product details", product_path(product), class: "btn btn-primary" %></p>
+              <p><%= link_to "Product Details", product_path(product), class: "btn btn-primary" %></p>
             </div><!-- /.col-lg-4 -->
             <% end %>
         </div><!-- /.row -->
-
 
         <!-- START THE FEATURETTES -->
 
@@ -72,11 +74,12 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Description.</p>
+            <h2 class="featurette-heading">The best laptops.</h2>
+            <h2><span class="text-muted">Incredibly fast and lightweight.</span></h2>
+            <p class="lead">Apple MacBooks (Air / Pro) are preferred for Wyncode.</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15f459942ae%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15f459942ae%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="https://multimedia.bbycastatic.ca/multimedia/products/500x500/103/10360/10360535.jpg" data-holder-rendered="true">
           </div>
         </div>
 
@@ -84,11 +87,12 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Description.</p>
+            <h2 class="featurette-heading">The best backpacks.</h2>
+            <h2><span class="text-muted">Stylish and practical.</span></h2>
+            <p class="lead">Herschel and JanSport leave the competition in the dust.</p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15f459942b1%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15f459942b1%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="https://cdn1.ebags.com/is/image/im4/342844_1_1?resmode=4&op_usm=1,1,1,&qlt=70,1&hei=500&wid=500&align=0,1" data-holder-rendered="true">
           </div>
         </div>
 
@@ -96,14 +100,22 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Description.</p>
+            <h2 class="featurette-heading">The best cold gear.</h2>
+            <h2><span class="text-muted">Zuckerberg approved.</span></h2>
+            <p class="lead">Completely necessary. Trust us.</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15f459942b3%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15f459942b3%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="https://i.pinimg.com/736x/fe/92/9a/fe929a42a9ef78037b6f1a18beada3d2--minimalist-closet-travel-style.jpg" data-holder-rendered="true">
           </div>
         </div>
 
         <!-- /END THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+      	<footer class="container">
+      		<p class="float-right"><a href="#">Back To Top</a></p>
+      		<p>© 2017 WynShop, Inc.</p>
+      	</footer>
 
       </div><!-- /.container -->
