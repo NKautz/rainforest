@@ -82,7 +82,9 @@ label {
 .login-page {
     min-height: 400px;
 }
+
 /*****************nav bar styles*********************/
+
 nav.bg-light {
     background-color: white !important;
     border-bottom: 1px solid black;
@@ -92,9 +94,24 @@ nav.bg-light {
     color: black !important;
     font-size: 16px;
 }
+
 /*****************END nav bar styles*********************/
 
 /*****************HOME PAGE STYLES***********************/
-.container div#myCarousel {
-    margin-top: 90px !important;
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9 !important;
+    border-color: #0062cc;
 }
+
+/************************END*****************************/
+
+/*****************PRODUCT PAGE STYLES***********************/
+
+.text-center {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/************************END*****************************/
