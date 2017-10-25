@@ -6,9 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
-
-User.create!([{
+users = [{
   name: "Sheldon",
   email: "Sheldon@WynShop.co",
   password: "Bazinga",
@@ -19,13 +17,20 @@ User.create!([{
   email: "Penny@WynCode.co",
   password: "WynCode",
   is_admin: false
-}])
+}]
 
-p "Created #{User.count} users"
+users.each do |user|
+  User.find_or_create_by(name: user[:name]) do |u|
+    p.email = user[:email]
+    p.password = user[:password]
+    p.is_admin = user[:is_admin]
+    p.save!
+  end
+end
 
-Product.destroy_all
+p "Created #{User.count} users."
 
-Product.create!([{
+products = [{
   name: "12-inch MacBook 1.3GHz Processor 512GB Storage",
   image: "https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/m/ac/macbook/select/macbook-select-space-gray-201706?wid=452&hei=420&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=1505775431709",
   description: "1.3GHz dual-core 7th-generation Intel Core i5 processor, Turbo Boost up to 3.2GHz, 8GB 1866MHz LPDDR3 memory, 512GB SSD storage1, Intel HD Graphics 615, Keyboard with second-generation butterfly mechanism",
@@ -198,6 +203,32 @@ Product.create!([{
   image: "http://lp.hm.com/hmprod?set=key[source],value[/model/2017/F00%200484108%20008%2066%201952.jpg]&set=key[rotate],value[]&set=key[width],value[]&set=key[height],value[]&set=key[x],value[]&set=key[y],value[]&set=key[type],value[STILL_LIFE_FRONT]&set=key[hmver],value[1]&call=url[file:/product/large]",
   description: "Oversized, wide-cut sweatshirt fabric with a lined hood and ribbed hem. Dropped shoulders, kangaroo pocket at front, and long, wide sleeves with ribbing at cuffs.",
   price_in_cents: "2999"
+}]
+
+products.each do |product|
+  Product.find_or_create_by(name: product[:name]) do |p|
+    p.image = product[:image]
+    p.description = product[:description]
+    p.price_in_cents = product[:price_in_cents]
+    p.save!
+  end
+end
+
+p "Created #{Product.count} products."
+
+Review.destroy_all
+
+Review.create!([{
+  comment: "I can't code without it. -Evan Spiegel",
+  product_id: 465
+},
+{
+  comment: "So stylish! -Elon Musk",
+  product_id: 466
+},
+{
+  comment: "So comfortable and keeps me warm. -Mark Zuckerberg",
+  product_id: 467
 }])
 
-p "Created #{Product.count} products"
+p "Created #{Review.count} reviews."
