@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
   def home
     @products = Product.last(3)
   end
- 
+
   # GET /products/new
   def new
     @product = Product.new
@@ -81,4 +81,3 @@ class ProductsController < ApplicationController
       params.require(:product).permit(:name, :description, :price_in_cents, :image)
     end
 end
-
