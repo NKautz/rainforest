@@ -2,7 +2,6 @@
   <h1>Product List</h1>
 </div>
 
-
 <div class="row">
   <% @products.each do |product| %>
   <div class="col-md-4">
@@ -14,17 +13,19 @@
         <p class="card-text"><%= product.description %></p>
         <p class="card-text"><strong>$ <%= product.formatted_price %></strong></p>
         <button class="btn btn-primary"><%= link_to 'View', product %></button>
-        <% if current_user.is_admin %>
-        <div class="admin">
-          <button type="button" class="btn btn-warning">
-            <%= link_to 'Edit', edit_product_path(product) %>
-          </button>
-          <button type="button" class="btn btn-danger">
-            <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </button>
 
-        </div>
-       <% end %>
+          <% if current_user && current_user.is_admin   %>
+          <div class="admin">
+            <button type="button" class="btn btn-warning">
+              <%= link_to 'Edit', edit_product_path(product) %>
+            </button>
+            <button type="button" class="btn btn-danger">
+              <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </button>
+
+          </div>
+         <% end %>
+
       </div>
     </div>
   </div>
@@ -32,9 +33,11 @@
 </div>
 
 <div class="new-product">
-  <% if current_user.is_admin %>
-  <button type="button" class="btn btn-success"><%= link_to 'New Product', new_product_path %></button>
-  <% end %>
+
+    <% if current_user && current_user.is_admin %>
+    <button type="button" class="btn btn-success"><%= link_to 'New Product', new_product_path %></button>
+    <% end %>
+
 </div>
 <hr class="featurette-divider">
 
